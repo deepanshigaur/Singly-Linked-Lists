@@ -96,7 +96,7 @@ else
 	node_setNext(prev,insert);
 	node_setNext(insert,curr);
 }
-	}
+	
 node list_getTail(list lst) {
 	assert(list_valid(lst)); // Ensure no endless loop
 	if ((*lst)==NULL) return NULL; // Null list has no tail
@@ -155,5 +155,4 @@ void list_print(char *prefix,list lst) {
 void list_free(list lst) {
 	if (*lst) node_free(*lst); // Only free the nodes if the list is not empty
 	free(lst);
-
 }
